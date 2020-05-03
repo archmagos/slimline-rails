@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  database: <%= ENV['APP_DATABASE_DBNAME'] %>
+  host: <%= ENV['APP_DATABASE_HOST'] %>
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+  pool: <%= ENV['APP_DATABASE_POOL'] %>
+  username: <%= ENV['APP_DATABASE_USERNAME'] %>
+
+development:
+  <<: *default
+
+production:
+  <<: *default
+
+test:
+  <<: *default
+  database: app_test

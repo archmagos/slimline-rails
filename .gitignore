@@ -1,6 +1,6 @@
+.env
 /.bundle
 /log/*
 /tmp/*
 /public/assets
-.byebug_history
 /config/master.key
