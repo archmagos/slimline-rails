@@ -1,3 +1,7 @@
 language: ruby
+services: postgresql
 script:
   - bundle exec rspec
+before_script:
+  - cp .env.test.example .env
+  - RAILS_ENV=test bundle exec rails db:setup
